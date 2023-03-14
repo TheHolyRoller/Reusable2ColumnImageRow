@@ -1,0 +1,228 @@
+
+
+/* 
+
+Okay so this is how it's going to work. 
+
+
+First of all we have the positional container section. 
+
+This will center the main container on the page. 
+
+
+Then we have the main container. 
+This container will contain two divs. These divs will have background images set 
+
+Then once that is in place the main container should be turned into a grid container. 
+
+This way we can add in two columns and then we have our two main large images for 
+our Row. 
+
+The next step is adding text onto the image. 
+
+
+
+
+
+
+*/
+
+/* Add in the global selector  */
+*, *::after, *::before{
+    
+    /* Remove the padding and margin here  */
+    padding: 0; 
+    margin: 0; 
+    
+    /* Add in the box sizing here  */
+    box-sizing: border-box;
+    
+    /* Add in the outline and background color here  */
+    
+    
+    /* background-color: rgba(999, 999, 999, 0.4); */
+    /* outline: 3px solid navy;  */
+    
+    
+}
+
+/* Add in the root section here  */
+:root{
+
+    
+    
+}
+
+
+html{
+    scroll-behavior: smooth;
+    
+}
+
+
+body{
+    
+    /* Add in the responsive full viewport dimensions here  */
+    width: 100vw; 
+    min-height: 100vh;
+    position: relative; 
+    
+    /* Remove the padding here  */
+    padding: 0px; 
+    margin: 0px; 
+    
+    
+    /* Add in the font family  */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+    /* Add in the styling and background color here  */
+    background-color: #444;
+    color: #938484; 
+    
+}
+
+
+/* Add in the positional container here */
+.positionalContainer{
+    /* Make sure this container takes up the full viewport here  */
+    width: 100vw; 
+    min-height: 100vh;
+    position: relative;
+    display: grid; 
+    justify-content: center;
+    align-content: center;
+    
+    
+    
+    
+}
+
+
+/* Add in the main container here  */
+
+.mainContainer{
+    
+    /* Add in the dimensions here  */
+    
+    /* Clamp the width here  */
+    width: clamp(10rem, 99vw + 1rem, 99rem); 
+    /* Add in a min height here you might need to clamp it here  */
+    min-height: 40vh;
+    
+    max-height: 50vh;
+    overflow: hidden;
+    margin: 0 2rem; 
+    
+    
+    /* Add in the background color here  */
+    background-color: antiquewhite;
+    
+    
+    /* Create the grid layout here  */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));   
+    
+    gap: 2rem; 
+
+    
+}
+
+/* Add in both image containers here  */
+.imageOne{
+
+    background-image: url("https://images.unsplash.com/photo-1678614033804-6e1b6580c8a0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60"); 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    margin-left: 2rem; 
+    
+    /* This is not showing up because there is no minimum height given  */
+    min-height: 50vh;
+    
+    
+}
+.imageTwo{
+
+    background-image: url("https://images.unsplash.com/photo-1678730505377-7b21cabb6485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60"); 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    min-height: 50vh;
+    
+    margin-right: 2rem; 
+    
+}
+
+
+.textContainer{
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    position: relative; 
+    
+    
+    
+    
+}
+
+
+/* Style the text sections individually here  */
+
+.paragraphContainer{
+
+    display: grid;
+    justify-content: center;
+    
+    
+    
+    /* Now move the text up onto to overlap the Image  */
+    
+    /* Why isn't this working?  */
+    transform: translateY(-10rem);
+    /* position: absolute;  */
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
